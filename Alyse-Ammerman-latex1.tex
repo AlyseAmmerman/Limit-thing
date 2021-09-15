@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+%%----------------------------Preamble-------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{expl}{Example}[section]
+%%-----------
+\title{Limits in Calculus}
+\author{Alyse Ammerman}
+\date{Due Date: September 14, 2021}
+%%----------------------------PAGE START-----------------------------------p1
+\begin{document}
+\maketitle
+\newpage
+%%--------------------------------------------------------------------------p2
+The Theorem that will be shown in this paper is used for showing how limits can be applied to polynomial functions(\(p(x)\). Since as a limit of X approaches a real number,\(a\), the result of that limit will be the output of x. Because of that, we can apply that to a this theorem where, when a limit is applied to a function that is a polynomial, the limit is applied to every x-term, causing x to approach the value listed in the limit,\(a\), in each individual x-term; and therefore the value of that limit will be p(a).
+The theorem as explained is illustrated below...
+\begin{thm}
+    For any polynomial \[p(x)=c_0+c_1x+\cdots+c_nx^n\]\\ and for any real number \[\lim_{x\to a}p(x)=c_0+c_1x+\cdots+c_{n}a^n=p(a)\]
+    \end{thm}
+\begin{proof}
+    \begin{align}
+    \lim_{x\to a}p(x) &= \lim_{x\to a} (c_0 + c_{1}x +\cdots+c_{n}x^n)\\
+    &=\lim_{x\to a}c_0+\lim_{x\to a}c_{1}x+\cdots+\lim_{x\to a}c_{n}x^n\\
+    &=\lim_{x\to a}c_0+c_{1}\lim_{x\to a}x+\cdots+c_{n}\lim_{x\to a}x^{n}\\
+    &=c_0+c_{1}a+\cdots+c_{n}a^n= p(a)
+    \end{align}
+\end{proof}
+As you see in step (3), the constants (\(c_n\)'s) can also be pulled out into the front because it will not impact or change the limit of x in those terms. The limit can then be isolated to the x part of each term to get us to step (4) where the value \(a\) is approached for each x; finally getting us to the output, \(p(a)\).
+%%------------------------------------------------------------------------p3
+\newpage
+Lets try this out-
+\begin{expl} 
+In this example lets consider the function, \[f(x)=8+6x+12x^2+2x^3.\] Here we will using the theorem listed earlier in this section to show how \(\lim_{x\to 8}f(x)= f(8)\).
+    \begin{align*}\lim_{x\to 8}f(x) &= \lim_{x\to 8} (8+6x+12x^2+2x^3)\\
+    &=\lim_{x\to 8}8+\lim_{x\to 8}6x+\lim_{x\to 8}12x^2+\lim_{x\to 8}2x^3\\
+    &=\lim_{x\to 8}8+6\lim_{x\to 8}x+12\lim_{x\to 8}x^2+2\lim_{x\to 8}x^3\\
+    &=8+6(8)+12(8)^2+2(8)^3\\\\
+    \lim_{x\to 8}f(x)&=f(8)=1848
+    \end{align*}
+\end{expl}
+\end{document}
